@@ -1,0 +1,46 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = 'Knowledge That Compounds' } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <title>{title} | Gaudette AI</title>
+  </head>
+  <body class="min-h-screen bg-white">
+    <header class="bg-gray-900 text-white py-4">
+      <nav class="container mx-auto px-4">
+        <div class="flex justify-between items-center">
+          <a href="/" class="text-xl font-bold">Gaudette AI</a>
+          <div class="space-x-6">
+            <a href="/" class="hover:text-gray-300">Home</a>
+            <a href="/about" class="hover:text-gray-300">About</a>
+            <a href="/ktc" class="hover:text-gray-300">KTC</a>
+            <a href="/consulting" class="hover:text-gray-300">Consulting</a>
+            <a href="/contact" class="hover:text-gray-300">Contact</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+    
+    <main class="container mx-auto px-4 py-8">
+      <slot />
+    </main>
+    
+    <footer class="bg-gray-100 py-6 mt-12">
+      <div class="container mx-auto px-4 text-center text-gray-600">
+        <p>&copy; 2026 Gaudette AI inc. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>
