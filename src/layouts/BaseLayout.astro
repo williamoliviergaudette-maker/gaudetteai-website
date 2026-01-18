@@ -104,16 +104,21 @@ const t = nav[lang as keyof typeof nav] || nav.en;
   <body class="min-h-screen bg-gray-900 text-gray-100">
     <header class="bg-gray-800 text-white py-4">
       <nav class="container mx-auto px-4">
-        <div class="flex justify-between items-center">
+        <div class="grid grid-cols-3 items-center">
+          <!-- Left: Logo -->
           <a href={t.homeLink} class="text-xl font-bold">Gaudette AI</a>
-          <div class="flex items-center space-x-6">
+          
+          <!-- Center: Nav Links -->
+          <div class="flex items-center justify-center space-x-6">
             <a href={t.homeLink} class="hover:text-gray-300">{t.home}</a>
             <a href={t.aboutLink} class="hover:text-gray-300">{t.about}</a>
             <a href={t.ktcLink} class="hover:text-gray-300">{t.ktc}</a>
             <a href={t.consultingLink} class="hover:text-gray-300">{t.consulting}</a>
             <a href={t.contactLink} class="hover:text-gray-300">{t.contact}</a>
-            
-            <!-- Language Switcher Dropdown -->
+          </div>
+          
+          <!-- Right: Language Dropdown -->
+          <div class="flex justify-end">
             <div class="language-dropdown">
               <button class="language-button">
                 🌐 {t.language} ▼
