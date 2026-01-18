@@ -1,16 +1,16 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
 ---
 
 <BaseLayout title="Contact">
   <div class="max-w-2xl mx-auto">
-    <h1 class="text-4xl font-bold mb-6">Get In Touch</h1>
+    <h1 class="text-4xl font-bold mb-6">Contactez-Nous</h1>
     
-    <form name="contact" method="POST" data-netlify="true" class="space-y-6">
-      <input type="hidden" name="form-name" value="contact" />
+    <form name="contact-fr" method="POST" data-netlify="true" class="space-y-6">
+      <input type="hidden" name="form-name" value="contact-fr" />
       
       <div>
-        <label for="name" class="block text-sm font-medium mb-2 text-gray-200">Name</label>
+        <label for="name" class="block text-sm font-medium mb-2 text-gray-200">Nom</label>
         <input 
           type="text" 
           id="name" 
@@ -21,7 +21,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       </div>
 
       <div>
-        <label for="email" class="block text-sm font-medium mb-2 text-gray-200">Email</label>
+        <label for="email" class="block text-sm font-medium mb-2 text-gray-200">Courriel</label>
         <input 
           type="email" 
           id="email" 
@@ -32,7 +32,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       </div>
 
       <div>
-        <label for="company" class="block text-sm font-medium mb-2 text-gray-200">Company (optional)</label>
+        <label for="company" class="block text-sm font-medium mb-2 text-gray-200">Entreprise (optionnel)</label>
         <input 
           type="text" 
           id="company" 
@@ -56,16 +56,16 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         type="submit" 
         class="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 font-semibold"
       >
-        Send Message
+        Envoyer le Message
       </button>
     </form>
 
     <div class="mt-12 pt-12 border-t border-gray-700 text-center">
       <p class="text-gray-200 mb-2">
-        <strong>Email:</strong> fredericgaudette@hotmail.com
+        <strong>Courriel:</strong> fredericgaudette@hotmail.com
       </p>
       <p class="text-gray-200">
-        <strong>Based in:</strong> Sherbrooke, QC
+        <strong>Basé à:</strong> Sherbrooke, QC
       </p>
     </div>
   </div>
