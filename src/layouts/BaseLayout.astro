@@ -4,64 +4,119 @@ import '../styles/global.css';
 interface Props {
   title: string;
   description?: string;
+  lang?: string;
 }
 
-const { title, description = 'Knowledge That Compounds' } = Astro.props;
+const { title, description = 'Knowledge That Compounds', lang = 'en' } = Astro.props;
+
+// Navigation translations
+const nav = {
+  en: {
+    home: 'Home',
+    about: 'About',
+    ktc: 'KTC',
+    consulting: 'Consulting',
+    contact: 'Contact',
+    language: 'Language',
+    homeLink: '/',
+    aboutLink: '/about',
+    ktcLink: '/ktc',
+    consultingLink: '/consulting',
+    contactLink: '/contact'
+  },
+  fr: {
+    home: 'Accueil',
+    about: 'À Propos',
+    ktc: 'KTC',
+    consulting: 'Services',
+    contact: 'Contact',
+    language: 'Langue',
+    homeLink: '/fr',
+    aboutLink: '/fr/about',
+    ktcLink: '/fr/ktc',
+    consultingLink: '/fr/consulting',
+    contactLink: '/fr/contact'
+  }
+};
+
+const t = nav[lang as keyof typeof nav] || nav.en;
 ---
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang={lang}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content={description} />
     <title>{title} | Gaudette AI</title>
     <style>
-      .language-dropdown {
-        position: relative;
-      }
-      .language-menu {
-        display: none;
-        position: absolute;
-        right: 0;
-        top: 100%;
-        background: #1f2937;
-        border: 1px solid #374151;
-        border-radius: 0.5rem;
-        margin-top: 0.5rem;
-        min-width: 150px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-      }
-      .language-dropdown:hover .language-menu {
-        display: block;
-      }
-      .language-menu a {
-        display: block;
-        padding: 0.75rem 1rem;
-        color: white;
-        text-decoration: none;
-      }
-      .language-menu a:hover {
-        background: #374151;
-      }
-    </style>
+  .language-dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  .language-button {
+    padding: 2rem 1.5rem;
+    margin: -2rem -1.5rem;
+    background: none;
+    border: none;
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+  .language-button:hover {
+    color: #d1d5db;
+  }
+  .language-menu {
+    display: none;
+    position: absolute;
+    right: -0.3rem;
+    top: 100%;
+    background: #1f2937;
+    border: 1px solid #374151;
+    border-radius: 0.5rem;
+    min-width: 125px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    z-index: 100;
+    margin-top: 0.5rem;
+  }
+  .language-dropdown:hover .language-menu {
+    display: block;
+  }
+  .language-menu a {
+    display: block;
+    padding: 0.75rem 1rem;
+    color: white;
+    text-decoration: none;
+  }
+  .language-menu a:hover {
+    background: #374151;
+  }
+  .language-menu a:first-child {
+    border-radius: 0.5rem 0.5rem 0 0;
+  }
+  .language-menu a:last-child {
+    border-radius: 0 0 0.5rem 0.5rem;
+  }
+</style>
   </head>
   <body class="min-h-screen bg-gray-900 text-gray-100">
     <header class="bg-gray-800 text-white py-4">
       <nav class="container mx-auto px-4">
         <div class="flex justify-between items-center">
-          <a href="/" class="text-xl font-bold">Gaudette AI</a>
+          <a href={t.homeLink} class="text-xl font-bold">Gaudette AI</a>
           <div class="flex items-center space-x-6">
-            <a href="/" class="hover:text-gray-300">Home</a>
-            <a href="/about" class="hover:text-gray-300">About</a>
-            <a href="/ktc" class="hover:text-gray-300">KTC</a>
-            <a href="/consulting" class="hover:text-gray-300">Consulting</a>
-            <a href="/contact" class="hover:text-gray-300">Contact</a>
+            <a href={t.homeLink} class="hover:text-gray-300">{t.home}</a>
+            <a href={t.aboutLink} class="hover:text-gray-300">{t.about}</a>
+            <a href={t.ktcLink} class="hover:text-gray-300">{t.ktc}</a>
+            <a href={t.consultingLink} class="hover:text-gray-300">{t.consulting}</a>
+            <a href={t.contactLink} class="hover:text-gray-300">{t.contact}</a>
             
             <!-- Language Switcher Dropdown -->
             <div class="language-dropdown">
-              <button class="hover:text-gray-300 font-semibold cursor-pointer">
-                🌐 Language ▼
+              <button class="language-button">
+                🌐 {t.language} ▼
               </button>
               <div class="language-menu">
                 <a href="/">🇬🇧 English</a>
