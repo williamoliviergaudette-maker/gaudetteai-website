@@ -1,7 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
-
 <BaseLayout title="Consulting">
   <div class="max-w-4xl mx-auto">
     <h1 class="text-4xl font-bold mb-6">Consulting Services</h1>
@@ -9,25 +8,22 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     <p class="text-lg text-gray-200 mb-8">
       We help organizations implement Knowledge That Compounds systems.
     </p>
-
     <div class="grid gap-8 md:grid-cols-2">
-      <div class="border border-gray-700 bg-gray-800 p-6 rounded-lg">
+      <div class="border border-gray-700 bg-gray-800 p-6 rounded-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-blue-500/20 hover:border-blue-500/50 cursor-pointer">
         <h3 class="text-2xl font-semibold mb-4">Starter</h3>
         <p class="text-gray-200 mb-4">
           Templates and guidance to implement 1-2 Brains yourself.
         </p>
         <p class="text-sm text-gray-400">From $500</p>
       </div>
-
-      <div class="border border-gray-700 bg-gray-800 p-6 rounded-lg">
+      <div class="border border-gray-700 bg-gray-800 p-6 rounded-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-blue-500/20 hover:border-blue-500/50 cursor-pointer">
         <h3 class="text-2xl font-semibold mb-4">Professional</h3>
         <p class="text-gray-200 mb-4">
           We architect 2-3 Brain networks and train your team.
         </p>
         <p class="text-sm text-gray-400">From $5,000</p>
       </div>
-
-      <div class="border border-gray-700 bg-gray-800 p-6 rounded-lg md:col-span-2">
+      <div class="border border-gray-700 bg-gray-800 p-6 rounded-lg md:col-span-2 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-blue-500/20 hover:border-blue-500/50 cursor-pointer">
         <h3 class="text-2xl font-semibold mb-4">Enterprise</h3>
         <p class="text-gray-200 mb-4">
           Full Standards 1-14, done-for-you implementation, 
@@ -36,7 +32,6 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <p class="text-sm text-gray-400">From $50,000</p>
       </div>
     </div>
-
     <div class="mt-12 text-center">
       <a href="/contact" class="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 inline-block">
         Schedule Discovery Call
