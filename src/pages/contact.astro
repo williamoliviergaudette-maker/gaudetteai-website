@@ -3,9 +3,9 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
 <BaseLayout title="Contact">
-  <!-- Hero Section -->
-  <section class="bg-gradient-to-br from-blue-50 via-white to-blue-50 border-b border-gray-200">
-    <div class="container mx-auto px-4 py-16 max-w-2xl">
+  <!-- Hero Section - No border -->
+  <section class="bg-gray-50">
+    <div class="container mx-auto px-4 pt-16 pb-8 max-w-2xl">
       <div class="inline-block mb-4">
         <div class="h-1 w-20 bg-gradient-to-r from-blue-600 to-blue-400 rounded-full mb-6"></div>
       </div>
@@ -16,8 +16,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     </div>
   </section>
 
-  <!-- Form Section -->
-  <section class="bg-white py-16">
+  <!-- Form Section - Seamless continuation -->
+  <section class="bg-gray-50 pb-16">
     <div class="container mx-auto px-4 max-w-2xl">
       <form name="contact" method="POST" data-netlify="true" class="space-y-6 bg-white border border-gray-200 rounded-xl p-8 shadow-lg">
         <input type="hidden" name="form-name" value="contact" />
@@ -78,7 +78,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       </form>
 
       <!-- Contact Info -->
-      <div class="mt-12 p-8 bg-gradient-to-br from-blue-50 to-white rounded-xl border border-blue-100">
+      <div class="mt-12 p-8 bg-white rounded-xl border border-gray-200 shadow-lg">
         <h3 class="text-xl font-bold text-gray-900 mb-4">Other Ways to Reach Us</h3>
         <div class="space-y-3">
           <p class="text-gray-700">
