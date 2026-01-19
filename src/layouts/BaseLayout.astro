@@ -13,29 +13,29 @@ const { title, description = 'Knowledge That Compounds', lang = 'en' } = Astro.p
 const nav = {
   en: {
     home: 'Home',
-    about: 'About',
     ktc: 'KTC',
     consulting: 'Consulting',
     contact: 'Contact',
+    faq: 'FAQ',
     language: 'Language',
     homeLink: '/',
-    aboutLink: '/about',
     ktcLink: '/ktc',
     consultingLink: '/consulting',
-    contactLink: '/contact'
+    contactLink: '/contact',
+    faqLink: '/faq'
   },
   fr: {
     home: 'Accueil',
-    about: 'À Propos',
     ktc: 'KTC',
     consulting: 'Services',
     contact: 'Contact',
+    faq: 'FAQ',
     language: 'Langue',
     homeLink: '/fr',
-    aboutLink: '/fr/about',
     ktcLink: '/fr/ktc',
     consultingLink: '/fr/consulting',
-    contactLink: '/fr/contact'
+    contactLink: '/fr/contact',
+    faqLink: '/fr/faq'
   }
 };
 
@@ -114,13 +114,13 @@ const t = nav[lang as keyof typeof nav] || nav.en;
           <!-- Left: Logo -->
           <a href={t.homeLink} class="text-xl font-bold">Gaudette AI</a>
           
-          <!-- Center: Nav Links (REORDERED) -->
+          <!-- Center: Nav Links (FAQ ADDED) -->
           <div class="flex items-center justify-center space-x-6">
             <a href={t.homeLink} class="hover:text-gray-300">{t.home}</a>
             <a href={t.consultingLink} class="hover:text-gray-300">{t.consulting}</a>
             <a href={t.contactLink} class="hover:text-gray-300">{t.contact}</a>
+            <a href={t.faqLink} class="hover:text-gray-300">{t.faq}</a>
             <a href={t.ktcLink} class="hover:text-gray-300">{t.ktc}</a>
-            <a href={t.aboutLink} class="hover:text-gray-300">{t.about}</a>
           </div>
           
           <!-- Right: Language Dropdown -->
