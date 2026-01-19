@@ -99,22 +99,28 @@ const t = nav[lang as keyof typeof nav] || nav.en;
   .language-menu a:last-child {
     border-radius: 0 0 0.5rem 0.5rem;
   }
+  
+  /* Dark Blue Gradient Background */
+  .gradient-bg {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
+    min-height: 100vh;
+  }
 </style>
   </head>
-  <body class="min-h-screen bg-gray-900 text-gray-100">
-    <header class="bg-gray-800 text-white py-4">
+  <body class="text-gray-100 gradient-bg">
+    <header class="bg-gray-800/50 backdrop-blur-sm text-white py-4 border-b border-gray-700/50">
       <nav class="container mx-auto px-4">
         <div class="grid grid-cols-3 items-center">
           <!-- Left: Logo -->
           <a href={t.homeLink} class="text-xl font-bold">Gaudette AI</a>
           
-          <!-- Center: Nav Links -->
+          <!-- Center: Nav Links (REORDERED) -->
           <div class="flex items-center justify-center space-x-6">
             <a href={t.homeLink} class="hover:text-gray-300">{t.home}</a>
-            <a href={t.aboutLink} class="hover:text-gray-300">{t.about}</a>
-            <a href={t.ktcLink} class="hover:text-gray-300">{t.ktc}</a>
             <a href={t.consultingLink} class="hover:text-gray-300">{t.consulting}</a>
             <a href={t.contactLink} class="hover:text-gray-300">{t.contact}</a>
+            <a href={t.ktcLink} class="hover:text-gray-300">{t.ktc}</a>
+            <a href={t.aboutLink} class="hover:text-gray-300">{t.about}</a>
           </div>
           
           <!-- Right: Language Dropdown -->
@@ -126,8 +132,6 @@ const t = nav[lang as keyof typeof nav] || nav.en;
               <div class="language-menu">
                 <a href="/">🇬🇧 English</a>
                 <a href="/fr">🇫🇷 Français</a>
-                <a href="/es">🇪🇸 Español</a>
-                <a href="/de">🇩🇪 Deutsch</a>
               </div>
             </div>
           </div>
@@ -139,7 +143,7 @@ const t = nav[lang as keyof typeof nav] || nav.en;
       <slot />
     </main>
     
-    <footer class="bg-black py-6 mt-12">
+    <footer class="bg-black/30 backdrop-blur-sm py-6 mt-12 border-t border-gray-700/50">
       <div class="container mx-auto px-4 text-center text-gray-400">
         <p>&copy; 2026 Gaudette AI inc. All rights reserved.</p>
       </div>
