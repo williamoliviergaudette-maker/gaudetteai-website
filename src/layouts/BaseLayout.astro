@@ -66,18 +66,18 @@ const t = nav[lang as keyof typeof nav] || nav.en;
     white-space: nowrap;
   }
   .language-button:hover {
-    color: #d1d5db;
+    color: #2563eb;
   }
   .language-menu {
     display: none;
     position: absolute;
     right: -0.3rem;
     top: 100%;
-    background: #1f2937;
-    border: 1px solid #374151;
+    background: white;
+    border: 1px solid #e2e8f0;
     border-radius: 0.5rem;
     min-width: 125px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     z-index: 100;
     margin-top: 0.5rem;
   }
@@ -87,11 +87,13 @@ const t = nav[lang as keyof typeof nav] || nav.en;
   .language-menu a {
     display: block;
     padding: 0.75rem 1rem;
-    color: white;
+    color: #334155;
     text-decoration: none;
+    transition: all 0.2s;
   }
   .language-menu a:hover {
-    background: #374151;
+    background: #f1f5f9;
+    color: #2563eb;
   }
   .language-menu a:first-child {
     border-radius: 0.5rem 0.5rem 0 0;
@@ -99,34 +101,30 @@ const t = nav[lang as keyof typeof nav] || nav.en;
   .language-menu a:last-child {
     border-radius: 0 0 0.5rem 0.5rem;
   }
-  
-  /* Dark Blue Gradient Background */
-  .gradient-bg {
-    background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
-    min-height: 100vh;
-  }
 </style>
   </head>
-  <body class="text-gray-100 gradient-bg">
-    <header class="bg-gray-800/50 backdrop-blur-sm text-white py-4 border-b border-gray-700/50">
-      <nav class="container mx-auto px-4">
+  <body class="bg-white text-gray-900">
+    <header class="bg-white border-b border-gray-200 sticky top-0 z-50 shadow-sm">
+      <nav class="container mx-auto px-4 py-4">
         <div class="grid grid-cols-3 items-center">
           <!-- Left: Logo -->
-          <a href={t.homeLink} class="text-xl font-bold">Gaudette AI</a>
+          <a href={t.homeLink} class="text-xl font-bold text-gray-900 hover:text-blue-600 transition-colors">
+            Gaudette AI
+          </a>
           
-          <!-- Center: Nav Links (FAQ ADDED) -->
+          <!-- Center: Nav Links -->
           <div class="flex items-center justify-center space-x-6">
-            <a href={t.homeLink} class="hover:text-gray-300">{t.home}</a>
-            <a href={t.consultingLink} class="hover:text-gray-300">{t.consulting}</a>
-            <a href={t.contactLink} class="hover:text-gray-300">{t.contact}</a>
-            <a href={t.faqLink} class="hover:text-gray-300">{t.faq}</a>
-            <a href={t.ktcLink} class="hover:text-gray-300">{t.ktc}</a>
+            <a href={t.homeLink} class="text-gray-700 hover:text-blue-600 font-medium transition-colors">{t.home}</a>
+            <a href={t.consultingLink} class="text-gray-700 hover:text-blue-600 font-medium transition-colors">{t.consulting}</a>
+            <a href={t.contactLink} class="text-gray-700 hover:text-blue-600 font-medium transition-colors">{t.contact}</a>
+            <a href={t.faqLink} class="text-gray-700 hover:text-blue-600 font-medium transition-colors">{t.faq}</a>
+            <a href={t.ktcLink} class="text-gray-700 hover:text-blue-600 font-medium transition-colors">{t.ktc}</a>
           </div>
           
           <!-- Right: Language Dropdown -->
           <div class="flex justify-end">
             <div class="language-dropdown">
-              <button class="language-button">
+              <button class="language-button text-gray-700">
                 🌐 {t.language} ▼
               </button>
               <div class="language-menu">
@@ -143,8 +141,8 @@ const t = nav[lang as keyof typeof nav] || nav.en;
       <slot />
     </main>
     
-    <footer class="bg-black/30 backdrop-blur-sm py-6 mt-12 border-t border-gray-700/50">
-      <div class="container mx-auto px-4 text-center text-gray-400">
+    <footer class="bg-gray-50 border-t border-gray-200 py-8 mt-16">
+      <div class="container mx-auto px-4 text-center text-gray-600">
         <p>&copy; 2026 Gaudette AI inc. All rights reserved.</p>
       </div>
     </footer>
