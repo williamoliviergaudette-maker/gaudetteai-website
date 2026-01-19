@@ -3,63 +3,86 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
 <BaseLayout title="Home">
-  <div class="max-w-4xl mx-auto">
-    <section class="text-center py-16">
-      <h1 class="text-5xl font-bold mb-6 text-gray-900">Knowledge That Compounds</h1>
-      <p class="text-xl text-gray-700 mb-8 leading-relaxed">
-        AI without persistent memory is a brilliant colleague with amnesia. 
-        Every conversation starts from zero.
-      </p>
-      <p class="text-lg text-gray-600 mb-8">
-        From first brain-master.md to 12-Brain network with 14 standards, 
-        a book, and incorporated company. <strong class="text-gray-900">14 days.</strong>
-      </p>
-      <div class="flex gap-4 justify-center">
-        <a href="/ktc" class="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 font-semibold shadow-md hover:shadow-lg transition-all">
-          Learn the Method
-        </a>
-        <a href="/consulting" class="bg-white text-blue-600 border-2 border-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 font-semibold transition-all">
-          Work With Us
-        </a>
+  <!-- Hero Section - Gradient Background -->
+  <section class="bg-gradient-to-br from-blue-50 via-white to-blue-50 border-b border-gray-200">
+    <div class="container mx-auto px-4 py-20 max-w-4xl">
+      <div class="text-center">
+        <div class="inline-block mb-4">
+          <div class="h-1 w-20 bg-gradient-to-r from-blue-600 to-blue-400 rounded-full mx-auto mb-6"></div>
+        </div>
+        <h1 class="text-5xl font-bold mb-6 text-gray-900">Knowledge That Compounds</h1>
+        <p class="text-xl text-gray-700 mb-6 leading-relaxed max-w-3xl mx-auto">
+          AI without persistent memory is a brilliant colleague with amnesia. 
+          Every conversation starts from zero.
+        </p>
+        <p class="text-lg text-gray-600 mb-8">
+          From first brain-master.md to 12-Brain network with 14 standards, 
+          a book, and incorporated company. <strong class="text-gray-900">14 days.</strong>
+        </p>
+        <div class="flex gap-4 justify-center">
+          <a href="/ktc" class="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 font-semibold shadow-lg hover:shadow-xl transition-all hover:-translate-y-0.5">
+            Learn the Method
+          </a>
+          <a href="/consulting" class="bg-white text-blue-600 border-2 border-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 font-semibold shadow-md hover:shadow-lg transition-all hover:-translate-y-0.5">
+            Work With Us
+          </a>
+        </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="py-16 border-t border-gray-200">
-      <h2 class="text-3xl font-bold mb-6 text-gray-900">The Problem</h2>
-      <p class="text-lg text-gray-700 mb-4 leading-relaxed">
-        Every AI conversation starts from zero. Context disappears between sessions. 
-        Knowledge gets lost. You repeat yourself constantly.
-      </p>
-      <p class="text-lg text-gray-700 leading-relaxed">
-        It's like having a brilliant colleague who forgets everything overnight.
-      </p>
-    </section>
+  <!-- Problem Section - White Background -->
+  <section class="bg-white border-b border-gray-200">
+    <div class="container mx-auto px-4 py-20 max-w-4xl">
+      <div class="border-l-4 border-blue-600 pl-6">
+        <h2 class="text-3xl font-bold mb-6 text-gray-900">The Problem</h2>
+        <p class="text-lg text-gray-700 mb-4 leading-relaxed">
+          Every AI conversation starts from zero. Context disappears between sessions. 
+          Knowledge gets lost. You repeat yourself constantly.
+        </p>
+        <p class="text-lg text-gray-700 leading-relaxed">
+          It's like having a brilliant colleague who forgets everything overnight.
+        </p>
+      </div>
+    </div>
+  </section>
 
-    <section class="py-16 border-t border-gray-200">
-      <h2 class="text-3xl font-bold mb-6 text-gray-900">The Solution</h2>
-      <p class="text-lg text-gray-700 mb-4 leading-relaxed">
-        Build systems where knowledge persists, compounds, and routes intelligently 
-        across specialized AI "Brains."
-      </p>
-      <p class="text-lg text-gray-700 leading-relaxed">
-        This is Knowledge That Compounds.
-      </p>
-    </section>
+  <!-- Solution Section - Light Gray Background -->
+  <section class="bg-gray-50 border-b border-gray-200">
+    <div class="container mx-auto px-4 py-20 max-w-4xl">
+      <div class="border-l-4 border-blue-600 pl-6">
+        <h2 class="text-3xl font-bold mb-6 text-gray-900">The Solution</h2>
+        <p class="text-lg text-gray-700 mb-4 leading-relaxed">
+          Build systems where knowledge persists, compounds, and routes intelligently 
+          across specialized AI "Brains."
+        </p>
+        <p class="text-lg text-gray-700 leading-relaxed">
+          This is Knowledge That Compounds.
+        </p>
+      </div>
+    </div>
+  </section>
 
-    <section class="py-16 border-t border-gray-200 bg-gray-50 -mx-4 px-4 sm:px-8 rounded-lg">
-      <h2 class="text-3xl font-bold mb-6 text-gray-900">About Gaudette AI</h2>
-      <p class="text-lg text-gray-700 mb-4 leading-relaxed">
-        Gaudette AI inc. helps knowledge workers build AI systems that remember.
-      </p>
-      <p class="text-lg text-gray-700 mb-4 leading-relaxed">
-        Founded in January 2026 by Frédéric Gaudette, we specialize in the 
-        Knowledge That Compounds (KTC) methodology.
-      </p>
-      <h3 class="text-2xl font-bold mt-8 mb-4 text-gray-900">Our Approach</h3>
-      <p class="text-lg text-gray-700 leading-relaxed">
-        We don't sell software. We teach methodology and deploy systems that 
-        compound knowledge over time.
-      </p>
-    </section>
-  </div>
+  <!-- About Section - White with Card -->
+  <section class="bg-white">
+    <div class="container mx-auto px-4 py-20 max-w-4xl">
+      <div class="bg-gradient-to-br from-blue-50 to-white p-8 rounded-xl border border-blue-100 shadow-lg">
+        <h2 class="text-3xl font-bold mb-6 text-gray-900">About Gaudette AI</h2>
+        <p class="text-lg text-gray-700 mb-4 leading-relaxed">
+          Gaudette AI inc. helps knowledge workers build AI systems that remember.
+        </p>
+        <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+          Founded in January 2026 by Frédéric Gaudette, we specialize in the 
+          Knowledge That Compounds (KTC) methodology.
+        </p>
+        <div class="border-t border-blue-200 pt-6 mt-6">
+          <h3 class="text-2xl font-bold mb-4 text-gray-900">Our Approach</h3>
+          <p class="text-lg text-gray-700 leading-relaxed">
+            We don't sell software. We teach methodology and deploy systems that 
+            compound knowledge over time.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
 </BaseLayout>
