@@ -3,63 +3,90 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 ---
 
 <BaseLayout title="Accueil" lang="fr">
-  <div class="max-w-4xl mx-auto">
-    <section class="text-center py-16">
-      <h1 class="text-5xl font-bold mb-6 text-gray-900">Knowledge That Compounds</h1>
-      <p class="text-xl text-gray-700 mb-8 leading-relaxed">
-        L'IA sans mémoire persistante est un collègue brillant atteint d'amnésie. 
-        Chaque conversation repart de zéro.
-      </p>
-      <p class="text-lg text-gray-600 mb-8">
-        Du premier brain-master.md à un réseau de 12 Cerveaux avec 14 standards, 
-        un livre et une entreprise incorporée. <strong class="text-gray-900">14 jours.</strong>
-      </p>
-      <div class="flex gap-4 justify-center">
-        <a href="/fr/ktc" class="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 font-semibold shadow-md hover:shadow-lg transition-all">
-          Découvrir la Méthode
-        </a>
-        <a href="/fr/consulting" class="bg-white text-blue-600 border-2 border-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 font-semibold transition-all">
-          Travailler Avec Nous
-        </a>
+  <!-- Hero Section - No border, consistent background -->
+  <section class="bg-gray-50">
+    <div class="container mx-auto px-4 pt-20 pb-16 max-w-4xl">
+      <div class="text-center">
+        <div class="inline-block mb-4">
+          <div class="h-1 w-20 bg-gradient-to-r from-blue-600 to-blue-400 rounded-full mx-auto mb-6"></div>
+        </div>
+        <h1 class="text-5xl font-bold mb-6 text-gray-900">Knowledge That Compounds</h1>
+        <p class="text-xl text-gray-700 mb-6 leading-relaxed max-w-3xl mx-auto">
+          L'IA sans mémoire persistante est un collègue brillant atteint d'amnésie. 
+          Chaque conversation repart de zéro.
+        </p>
+        <p class="text-lg text-gray-600 mb-8">
+          Du premier brain-master.md à un réseau de 12 Cerveaux avec 14 standards, 
+          un livre et une entreprise incorporée. <strong class="text-gray-900">14 jours.</strong>
+        </p>
+        <div class="flex gap-4 justify-center">
+          <a href="/fr/ktc" class="bg-white text-blue-600 border-2 border-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 font-semibold shadow-md hover:shadow-lg transition-all hover:-translate-y-0.5">
+            Découvrir la Méthode
+          </a>
+          <a href="/fr/consulting" class="bg-white text-blue-600 border-2 border-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 font-semibold shadow-md hover:shadow-lg transition-all hover:-translate-y-0.5">
+            Travailler Avec Nous
+          </a>
+        </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="py-16 border-t border-gray-200">
-      <h2 class="text-3xl font-bold mb-6 text-gray-900">Le Problème</h2>
-      <p class="text-lg text-gray-700 mb-4 leading-relaxed">
-        Chaque conversation IA repart de zéro. Le contexte disparaît entre les sessions. 
-        Les connaissances se perdent. Vous vous répétez constamment.
-      </p>
-      <p class="text-lg text-gray-700 leading-relaxed">
-        C'est comme avoir un collègue brillant qui oublie tout du jour au lendemain.
-      </p>
-    </section>
+  <!-- Problem Section - Seamless -->
+  <section class="bg-gray-50">
+    <div class="container mx-auto px-4 py-12 max-w-4xl">
+      <div class="bg-white p-8 rounded-xl border border-gray-200 shadow-lg">
+        <div class="border-l-4 border-blue-600 pl-6">
+          <h2 class="text-3xl font-bold mb-6 text-gray-900">Le Problème</h2>
+          <p class="text-lg text-gray-700 mb-4 leading-relaxed">
+            Chaque conversation IA repart de zéro. Le contexte disparaît entre les sessions. 
+            Les connaissances se perdent. Vous vous répétez constamment.
+          </p>
+          <p class="text-lg text-gray-700 leading-relaxed">
+            C'est comme avoir un collègue brillant qui oublie tout du jour au lendemain.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <section class="py-16 border-t border-gray-200">
-      <h2 class="text-3xl font-bold mb-6 text-gray-900">La Solution</h2>
-      <p class="text-lg text-gray-700 mb-4 leading-relaxed">
-        Construire des systèmes où les connaissances persistent, se multiplient et 
-        se dirigent intelligemment à travers des "Cerveaux" IA spécialisés.
-      </p>
-      <p class="text-lg text-gray-700 leading-relaxed">
-        C'est la Connaissance Qui Se Multiplie.
-      </p>
-    </section>
+  <!-- Solution Section - Seamless -->
+  <section class="bg-gray-50">
+    <div class="container mx-auto px-4 py-12 max-w-4xl">
+      <div class="bg-white p-8 rounded-xl border border-gray-200 shadow-lg">
+        <div class="border-l-4 border-blue-600 pl-6">
+          <h2 class="text-3xl font-bold mb-6 text-gray-900">La Solution</h2>
+          <p class="text-lg text-gray-700 mb-4 leading-relaxed">
+            Construire des systèmes où les connaissances persistent, se multiplient et 
+            se dirigent intelligemment à travers des "Cerveaux" IA spécialisés.
+          </p>
+          <p class="text-lg text-gray-700 leading-relaxed">
+            C'est la Connaissance Qui Se Multiplie.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <section class="py-16 border-t border-gray-200 bg-gray-50 -mx-4 px-4 sm:px-8 rounded-lg">
-      <h2 class="text-3xl font-bold mb-6 text-gray-900">À Propos de Gaudette AI</h2>
-      <p class="text-lg text-gray-700 mb-4 leading-relaxed">
-        Gaudette AI inc. aide les travailleurs du savoir à construire des systèmes IA qui se souviennent.
-      </p>
-      <p class="text-lg text-gray-700 mb-4 leading-relaxed">
-        Fondée en janvier 2026 par Frédéric Gaudette, nous nous spécialisons dans la 
-        méthodologie Connaissance Qui Se Multiplie (KTC).
-      </p>
-      <h3 class="text-2xl font-bold mt-8 mb-4 text-gray-900">Notre Approche</h3>
-      <p class="text-lg text-gray-700 leading-relaxed">
-        Nous ne vendons pas de logiciel. Nous enseignons une méthodologie et déployons des systèmes qui 
-        multiplient les connaissances au fil du temps.
-      </p>
-    </section>
-  </div>
+  <!-- About Section - Seamless -->
+  <section class="bg-gray-50 pb-16">
+    <div class="container mx-auto px-4 py-12 max-w-4xl">
+      <div class="bg-white p-8 rounded-xl border border-gray-200 shadow-lg">
+        <h2 class="text-3xl font-bold mb-6 text-gray-900">À Propos de Gaudette AI</h2>
+        <p class="text-lg text-gray-700 mb-4 leading-relaxed">
+          Gaudette AI inc. aide les travailleurs du savoir à construire des systèmes IA qui se souviennent.
+        </p>
+        <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+          Fondée en janvier 2026 par Frédéric Gaudette, nous nous spécialisons dans la 
+          méthodologie Connaissance Qui Se Multiplie (KTC).
+        </p>
+        <div class="border-t border-gray-200 pt-6 mt-6">
+          <h3 class="text-2xl font-bold mb-4 text-gray-900">Notre Approche</h3>
+          <p class="text-lg text-gray-700 leading-relaxed">
+            Nous ne vendons pas de logiciel. Nous enseignons une méthodologie et déployons des systèmes qui 
+            multiplient les connaissances au fil du temps.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
 </BaseLayout>
