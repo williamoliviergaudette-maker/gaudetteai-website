@@ -2,43 +2,74 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 ---
 <BaseLayout title="Services de Conseil" lang="fr">
-  <div class="max-w-4xl mx-auto">
-    <h1 class="text-4xl font-bold mb-6">Services de Conseil</h1>
-    
-    <p class="text-lg text-gray-200 mb-8">
-      Nous aidons les organisations à implémenter des systèmes Knowledge That Compounds.
-    </p>
-    <div class="grid gap-8 md:grid-cols-2">
-      <div class="border border-gray-700 bg-gray-800 p-6 rounded-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-blue-500/20 hover:border-blue-500/50 cursor-pointer">
-        <div class="text-4xl mb-4">🚀</div>
-        <h3 class="text-2xl font-semibold mb-4">Débutant</h3>
-        <p class="text-gray-200 mb-4">
-          Modèles et conseils pour implémenter 1-2 Cerveaux vous-même.
-        </p>
-        <p class="text-sm text-gray-400">À partir de 500$</p>
+  <!-- Hero Section - No border -->
+  <section class="bg-gray-900">
+    <div class="container mx-auto px-4 pt-16 pb-8 max-w-4xl">
+      <div class="inline-block mb-4">
+        <div class="h-1 w-20 bg-gradient-to-r from-blue-500 to-blue-400 rounded-full mb-6"></div>
       </div>
-      <div class="border border-gray-700 bg-gray-800 p-6 rounded-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-blue-500/20 hover:border-blue-500/50 cursor-pointer">
-        <div class="text-4xl mb-4">💼</div>
-        <h3 class="text-2xl font-semibold mb-4">Professionnel</h3>
-        <p class="text-gray-200 mb-4">
-          Nous architecturons 2-3 réseaux de Cerveaux et formons votre équipe.
-        </p>
-        <p class="text-sm text-gray-400">À partir de 5 000$</p>
+      <h1 class="text-4xl font-bold mb-6 text-white">Services de Conseil</h1>
+      <p class="text-lg text-gray-300 leading-relaxed max-w-2xl">
+        Nous aidons les organisations à implémenter des systèmes Connaissance Qui Se Multiplie.
+      </p>
+    </div>
+  </section>
+
+  <!-- Pricing Cards Section - Seamless -->
+  <section class="bg-gray-900 pb-16">
+    <div class="container mx-auto px-4 max-w-5xl">
+      <div class="grid gap-8 md:grid-cols-2">
+        <!-- Starter Card -->
+        <div class="group bg-gray-800 border-2 border-gray-700 p-8 rounded-xl transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:border-blue-500 cursor-pointer relative overflow-hidden">
+          <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 to-blue-400"></div>
+          <div class="text-5xl mb-6">🚀</div>
+          <h3 class="text-2xl font-bold mb-4 text-white">Débutant</h3>
+          <p class="text-gray-300 mb-6 leading-relaxed">
+            Modèles et conseils pour implémenter 1-2 Cerveaux vous-même.
+          </p>
+          <div class="pt-4 border-t border-gray-700">
+            <p class="text-sm text-gray-400 font-semibold uppercase tracking-wide mb-1">À partir de</p>
+            <p class="text-3xl font-bold text-white">500$</p>
+          </div>
+        </div>
+
+        <!-- Professional Card - Featured -->
+        <div class="group bg-gray-800 border-2 border-blue-500 p-8 rounded-xl transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl cursor-pointer relative overflow-hidden shadow-lg">
+          <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 to-blue-400"></div>
+          <div class="absolute top-4 right-4 bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-full">POPULAIRE</div>
+          <div class="text-5xl mb-6">💼</div>
+          <h3 class="text-2xl font-bold mb-4 text-white">Professionnel</h3>
+          <p class="text-gray-300 mb-6 leading-relaxed">
+            Nous architecturons 2-3 réseaux de Cerveaux et formons votre équipe.
+          </p>
+          <div class="pt-4 border-t border-gray-700">
+            <p class="text-sm text-gray-400 font-semibold uppercase tracking-wide mb-1">À partir de</p>
+            <p class="text-3xl font-bold text-white">5 000$</p>
+          </div>
+        </div>
+
+        <!-- Enterprise Card - Full Width -->
+        <div class="group bg-gray-800 border-2 border-gray-700 p-8 rounded-xl md:col-span-2 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:border-blue-500 cursor-pointer relative overflow-hidden">
+          <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 to-blue-400"></div>
+          <div class="text-5xl mb-6">🏢</div>
+          <h3 class="text-2xl font-bold mb-4 text-white">Entreprise</h3>
+          <p class="text-gray-300 mb-6 leading-relaxed max-w-3xl">
+            Standards complets 1-14, implémentation clé en main, 
+            systèmes auto-améliorants.
+          </p>
+          <div class="pt-4 border-t border-gray-700">
+            <p class="text-sm text-gray-400 font-semibold uppercase tracking-wide mb-1">À partir de</p>
+            <p class="text-3xl font-bold text-white">50 000$</p>
+          </div>
+        </div>
       </div>
-      <div class="border border-gray-700 bg-gray-800 p-6 rounded-lg md:col-span-2 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-blue-500/20 hover:border-blue-500/50 cursor-pointer">
-        <div class="text-4xl mb-4">🏢</div>
-        <h3 class="text-2xl font-semibold mb-4">Entreprise</h3>
-        <p class="text-gray-200 mb-4">
-          Standards 1-14 complets, implémentation clé en main, 
-          systèmes auto-améliorants.
-        </p>
-        <p class="text-sm text-gray-400">À partir de 50 000$</p>
+
+      <!-- CTA Section -->
+      <div class="mt-16 text-center">
+        <a href="/fr/contact" class="inline-block bg-blue-600 text-white px-10 py-4 rounded-lg hover:bg-blue-700 font-semibold text-lg shadow-xl hover:shadow-2xl transition-all hover:-translate-y-1">
+          Planifier un Appel Découverte
+        </a>
       </div>
     </div>
-    <div class="mt-12 text-center">
-      <a href="/fr/contact" class="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 inline-block">
-        Planifier un Appel Découverte
-      </a>
-    </div>
-  </div>
+  </section>
 </BaseLayout>
