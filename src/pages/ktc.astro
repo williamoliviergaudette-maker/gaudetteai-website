@@ -3,51 +3,95 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
 <BaseLayout title="Knowledge That Compounds">
-  <div class="max-w-4xl mx-auto">
-    <h1 class="text-4xl font-bold mb-6">Knowledge That Compounds</h1>
-    
-    <p class="text-lg text-gray-200 mb-6">
-      A methodology for building AI systems where knowledge persists, 
-      compounds, and routes intelligently.
-    </p>
-
-    <h2 class="text-2xl font-bold mt-8 mb-4">Five Principles</h2>
-    
-    <div class="space-y-6">
-      <div class="border-l-4 border-blue-600 pl-4">
-        <h3 class="text-xl font-semibold mb-2">1. Give AI Your Knowledge</h3>
-        <p class="text-gray-200">AI must possess essential knowledge continuously, not just when asked.</p>
+  <!-- Hero Section - NO BORDER -->
+  <section class="bg-gray-900">
+    <div class="container mx-auto px-4 pt-16 pb-8 max-w-4xl">
+      <div class="inline-block mb-4">
+        <div class="h-1 w-20 bg-gradient-to-r from-blue-500 to-blue-400 rounded-full mb-6"></div>
       </div>
-      
-      <div class="border-l-4 border-blue-600 pl-4">
-        <h3 class="text-xl font-semibold mb-2">2. Capture As You Go</h3>
-        <p class="text-gray-200">Knowledge externalized at creation, not retroactively.</p>
-      </div>
-      
-      <div class="border-l-4 border-blue-600 pl-4">
-        <h3 class="text-xl font-semibold mb-2">3. Build Living Systems</h3>
-        <p class="text-gray-200">Systems that improve themselves through use.</p>
-      </div>
-      
-      <div class="border-l-4 border-blue-600 pl-4">
-        <h3 class="text-xl font-semibold mb-2">4. Distribute Intelligence</h3>
-        <p class="text-gray-200">Multiple specialized Brains, coordinated by central hub.</p>
-      </div>
-      
-      <div class="border-l-4 border-blue-600 pl-4">
-        <h3 class="text-xl font-semibold mb-2">5. You Stay in Control</h3>
-        <p class="text-gray-200">Human judgment maintained, AI assists but doesn't replace.</p>
-      </div>
-    </div>
-
-    <div class="mt-12 p-6 bg-gray-800 rounded-lg border border-gray-700">
-      <h3 class="text-xl font-semibold mb-2">The Book</h3>
-      <p class="text-gray-200 mb-4">
-        "Knowledge That Compounds" - Available February 2026
+      <h1 class="text-4xl font-bold mb-6 text-white">Knowledge That Compounds</h1>
+      <p class="text-lg text-gray-300 leading-relaxed max-w-2xl">
+        A methodology for building AI systems where knowledge persists, 
+        compounds, and routes intelligently.
       </p>
-      <a href="/contact" class="text-blue-400 hover:text-blue-300 font-semibold">
-        Get notified at launch →
-      </a>
     </div>
-  </div>
+  </section>
+
+  <!-- Main Content Section - Flows seamlessly -->
+  <section class="bg-gray-900 pb-16">
+    <div class="container mx-auto px-4 max-w-4xl">
+      
+      <!-- Book Section -->
+      <div class="mb-16 p-8 bg-gray-800 rounded-2xl border border-gray-700 shadow-lg">
+        <div class="flex items-start gap-6">
+          <div class="flex-shrink-0 text-6xl">📚</div>
+          <div>
+            <h3 class="text-2xl font-bold mb-2 text-white">The Book</h3>
+            <p class="text-gray-300 mb-4 text-lg">
+              "Knowledge That Compounds" - Available February 2026
+            </p>
+            <a href="/contact" class="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 font-semibold transition-all shadow-md hover:shadow-lg hover:-translate-y-0.5">
+              Get notified at launch →
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Five Principles -->
+      <h2 class="text-3xl font-bold mb-10 text-white text-center">Five Principles</h2>
+      
+      <div class="space-y-6">
+        <div class="group bg-gray-800 border-l-4 border-blue-500 pl-6 pr-6 py-6 rounded-r-xl shadow-md hover:shadow-xl transition-all hover:-translate-x-1">
+          <div class="flex items-start gap-4">
+            <div class="flex-shrink-0 w-10 h-10 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-lg">1</div>
+            <div>
+              <h3 class="text-xl font-bold mb-2 text-white">Give AI Your Knowledge</h3>
+              <p class="text-gray-300">AI must possess essential knowledge continuously, not just when asked.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="group bg-gray-800 border-l-4 border-blue-500 pl-6 pr-6 py-6 rounded-r-xl shadow-md hover:shadow-xl transition-all hover:-translate-x-1">
+          <div class="flex items-start gap-4">
+            <div class="flex-shrink-0 w-10 h-10 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-lg">2</div>
+            <div>
+              <h3 class="text-xl font-bold mb-2 text-white">Capture As You Go</h3>
+              <p class="text-gray-300">Knowledge externalized at creation, not retroactively.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="group bg-gray-800 border-l-4 border-blue-500 pl-6 pr-6 py-6 rounded-r-xl shadow-md hover:shadow-xl transition-all hover:-translate-x-1">
+          <div class="flex items-start gap-4">
+            <div class="flex-shrink-0 w-10 h-10 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-lg">3</div>
+            <div>
+              <h3 class="text-xl font-bold mb-2 text-white">Build Living Systems</h3>
+              <p class="text-gray-300">Systems that improve themselves through use.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="group bg-gray-800 border-l-4 border-blue-500 pl-6 pr-6 py-6 rounded-r-xl shadow-md hover:shadow-xl transition-all hover:-translate-x-1">
+          <div class="flex items-start gap-4">
+            <div class="flex-shrink-0 w-10 h-10 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-lg">4</div>
+            <div>
+              <h3 class="text-xl font-bold mb-2 text-white">Distribute Intelligence</h3>
+              <p class="text-gray-300">Multiple specialized Brains, coordinated by central hub.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="group bg-gray-800 border-l-4 border-blue-500 pl-6 pr-6 py-6 rounded-r-xl shadow-md hover:shadow-xl transition-all hover:-translate-x-1">
+          <div class="flex items-start gap-4">
+            <div class="flex-shrink-0 w-10 h-10 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-lg">5</div>
+            <div>
+              <h3 class="text-xl font-bold mb-2 text-white">You Stay in Control</h3>
+              <p class="text-gray-300">Human judgment maintained, AI assists but doesn't replace.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
 </BaseLayout>
