@@ -3,21 +3,23 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 ---
 
 <BaseLayout title="Contact" lang="fr">
-  <!-- Hero Section - No border -->
-  <section class="bg-gray-50">
-    <div class="container mx-auto px-4 pt-16 pb-8 max-w-2xl">
-      <div class="inline-block mb-4">
-        <div class="h-1 w-20 bg-gradient-to-r from-blue-600 to-blue-400 rounded-full mb-6"></div>
+  <!-- Hero Section - In white card -->
+  <section class="bg-gray-100">
+    <div class="container mx-auto px-4 pt-16 pb-12 max-w-2xl">
+      <div class="bg-white p-8 rounded-xl border border-gray-200 shadow-lg">
+        <div class="inline-block mb-4">
+          <div class="h-1 w-20 bg-gradient-to-r from-blue-600 to-blue-400 rounded-full mb-6"></div>
+        </div>
+        <h1 class="text-4xl font-bold mb-6 text-gray-900">Contactez-Nous</h1>
+        <p class="text-lg text-gray-700 leading-relaxed">
+          Prêt à implémenter Connaissance Qui Se Multiplie? Discutons de vos besoins.
+        </p>
       </div>
-      <h1 class="text-4xl font-bold mb-6 text-gray-900">Contactez-Nous</h1>
-      <p class="text-lg text-gray-700 leading-relaxed">
-        Prêt à implémenter Knowledge That Compounds? Discutons de vos besoins.
-      </p>
     </div>
   </section>
 
   <!-- Form Section - Seamless continuation -->
-  <section class="bg-gray-50 pb-16">
+  <section class="bg-gray-100 pb-16">
     <div class="container mx-auto px-4 max-w-2xl">
       <form name="contact-fr" method="POST" data-netlify="true" class="space-y-6 bg-white border border-gray-200 rounded-xl p-8 shadow-lg">
         <input type="hidden" name="form-name" value="contact-fr" />
