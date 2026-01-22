@@ -3,7 +3,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 ---
 
 <BaseLayout title="Accueil" lang="fr">
-  <!-- Hero Section - In white card for consistency -->
+  <!-- Hero Section - Simplified and Professional -->
   <section class="bg-gray-100">
     <div class="container mx-auto px-4 pt-16 pb-12 max-w-4xl">
       <div class="bg-white p-8 rounded-xl border border-gray-200 shadow-lg">
@@ -12,21 +12,16 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
             <div class="h-1 w-20 bg-gradient-to-r from-blue-600 to-blue-400 rounded-full mx-auto mb-6"></div>
           </div>
           <h1 class="text-5xl font-bold mb-6 text-gray-900">Knowledge That Compounds</h1>
-          <p class="text-xl text-gray-700 mb-6 leading-relaxed max-w-3xl mx-auto">
-            L'IA sans mémoire persistante est un collègue brillant atteint d'amnésie.
-            <br> Chaque conversation repart de zéro.
-          </p>
-          <p class="text-lg text-gray-600 mb-8">
-            Du premier brain à un réseau de 12 brains avec 14 standards, 
-            un livre et une entreprise incorporée.
-            <br> <strong class="text-gray-900">En seulement 14 jours.</strong>
+          <p class="text-2xl text-gray-700 mb-8 leading-relaxed max-w-3xl mx-auto">
+           <i> Une méthodologie pour construire des systèmes IA personnalisés où les connaissances persistent, 
+            se multiplient et se dirigent intelligemment.</i>
           </p>
           <div class="flex gap-4 justify-center">
-            <a href="/fr/ktc" class="bg-white text-blue-600 border-2 border-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 font-semibold shadow-md hover:shadow-lg transition-all hover:-translate-y-0.5">
-              Découvrir la Méthode
-            </a>
             <a href="/fr/consulting" class="bg-white text-blue-600 border-2 border-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 font-semibold shadow-md hover:shadow-lg transition-all hover:-translate-y-0.5">
               Travailler Avec Nous
+            </a>
+            <a href="/fr/ktc" class="bg-white text-blue-600 border-2 border-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 font-semibold shadow-md hover:shadow-lg transition-all hover:-translate-y-0.5">
+              Découvrir la Méthode
             </a>
           </div>
         </div>
@@ -34,11 +29,12 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
     </div>
   </section>
 
-  <!-- Problem Section - Seamless -->
+  <!-- Problem + Solution Section - Merged -->
   <section class="bg-gray-100">
     <div class="container mx-auto px-4 py-12 max-w-4xl">
       <div class="bg-white p-8 rounded-xl border border-gray-200 shadow-lg">
-        <div class="border-l-4 border-blue-600 pl-6">
+        <!-- Problem -->
+        <div class="border-l-4 border-blue-600 pl-6 mb-10">
           <h2 class="text-3xl font-bold mb-6 text-gray-900">Le Problème</h2>
           <p class="text-lg text-gray-700 mb-4 leading-relaxed">
             Chaque conversation IA repart de zéro. Le contexte disparaît entre les sessions. 
@@ -48,14 +44,8 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
             C'est comme avoir un collègue brillant qui oublie tout du jour au lendemain.
           </p>
         </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- Solution Section - Seamless -->
-  <section class="bg-gray-100">
-    <div class="container mx-auto px-4 py-12 max-w-4xl">
-      <div class="bg-white p-8 rounded-xl border border-gray-200 shadow-lg">
+        <!-- Solution -->
         <div class="border-l-4 border-blue-600 pl-6">
           <h2 class="text-3xl font-bold mb-6 text-gray-900">La Solution</h2>
           <p class="text-lg text-gray-700 mb-4 leading-relaxed">
