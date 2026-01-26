@@ -50,70 +50,150 @@ const t = nav[lang as keyof typeof nav] || nav.en;
     <meta name="description" content={description} />
     <title>{title} | Gaudette AI</title>
     <style>
-  .language-dropdown {
-    position: relative;
-    display: inline-block;
-  }
-  .language-button {
-    padding: 0.75rem 1.5rem;
-    margin: -0.75rem -1.5rem;
-    background: none;
-    border: none;
-    color: inherit;
-    font: inherit;
-    cursor: pointer;
-    font-weight: 600;
-    white-space: nowrap;
-  }
-  .language-button:hover {
-    color: #2563eb;
-  }
-  .language-menu {
-    display: none;
-    position: absolute;
-    right: -0.3rem;
-    top: 100%;
-    background: white;
-    border: 1px solid #e2e8f0;
-    border-radius: 0.5rem;
-    min-width: 125px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-    z-index: 100;
-    margin-top: 0.5rem;
-  }
-  .language-dropdown:hover .language-menu {
-    display: block;
-  }
-  .language-menu a {
-    display: block;
-    padding: 0.75rem 1rem;
-    color: #334155;
-    text-decoration: none;
-    transition: all 0.2s;
-  }
-  .language-menu a:hover {
-    background: #f1f5f9;
-    color: #2563eb;
-  }
-  .language-menu a:first-child {
-    border-radius: 0.5rem 0.5rem 0 0;
-  }
-  .language-menu a:last-child {
-    border-radius: 0 0 0.5rem 0.5rem;
-  }
-</style>
+      /* Language Dropdown */
+      .language-dropdown {
+        position: relative;
+        display: inline-block;
+      }
+      .language-button {
+        padding: 0.75rem 1.5rem;
+        margin: -0.75rem -1.5rem;
+        background: none;
+        border: none;
+        color: inherit;
+        font: inherit;
+        cursor: pointer;
+        font-weight: 600;
+        white-space: nowrap;
+      }
+      .language-button:hover {
+        color: #2563eb;
+      }
+      .language-menu {
+        display: none;
+        position: absolute;
+        right: -0.3rem;
+        top: 100%;
+        background: white;
+        border: 1px solid #e2e8f0;
+        border-radius: 0.5rem;
+        min-width: 125px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        z-index: 100;
+        margin-top: 0.5rem;
+      }
+      .language-dropdown:hover .language-menu {
+        display: block;
+      }
+      .language-menu a {
+        display: block;
+        padding: 0.75rem 1rem;
+        color: #334155;
+        text-decoration: none;
+        transition: all 0.2s;
+      }
+      .language-menu a:hover {
+        background: #f1f5f9;
+        color: #2563eb;
+      }
+      .language-menu a:first-child {
+        border-radius: 0.5rem 0.5rem 0 0;
+      }
+      .language-menu a:last-child {
+        border-radius: 0 0 0.5rem 0.5rem;
+      }
+
+      /* Mobile Menu */
+      .mobile-menu {
+        display: none;
+        position: fixed;
+        top: 73px;
+        left: 0;
+        right: 0;
+        background: white;
+        border-bottom: 1px solid #e2e8f0;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        z-index: 40;
+      }
+      .mobile-menu.active {
+        display: block;
+      }
+      .mobile-menu a {
+        display: block;
+        padding: 1rem 1.5rem;
+        color: #334155;
+        text-decoration: none;
+        font-weight: 500;
+        border-bottom: 1px solid #f1f5f9;
+        transition: all 0.2s;
+      }
+      .mobile-menu a:hover {
+        background: #f1f5f9;
+        color: #2563eb;
+      }
+      .mobile-menu a:last-child {
+        border-bottom: none;
+      }
+
+      /* Hamburger Icon */
+      .hamburger {
+        display: none;
+        flex-direction: column;
+        gap: 4px;
+        cursor: pointer;
+        padding: 8px;
+      }
+      .hamburger span {
+        width: 24px;
+        height: 3px;
+        background: #334155;
+        border-radius: 2px;
+        transition: all 0.3s;
+      }
+      .hamburger.active span:nth-child(1) {
+        transform: rotate(45deg) translate(6px, 6px);
+      }
+      .hamburger.active span:nth-child(2) {
+        opacity: 0;
+      }
+      .hamburger.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -6px);
+      }
+
+      /* Mobile Styles */
+      @media (max-width: 768px) {
+        .hamburger {
+          display: flex;
+        }
+        .desktop-nav {
+          display: none;
+        }
+        .language-button {
+          padding: 0.5rem 0.75rem;
+          margin: -0.5rem -0.75rem;
+          font-size: 0.875rem;
+        }
+      }
+
+      /* Desktop Styles */
+      @media (min-width: 769px) {
+        .mobile-menu {
+          display: none !important;
+        }
+      }
+    </style>
   </head>
   <body class="bg-gray-100 text-gray-900">
     <header class="bg-white border-b border-gray-200 sticky top-0 z-50 shadow-sm">
       <nav class="container mx-auto px-4 py-4">
-        <div class="grid grid-cols-3 items-center">
+        <div class="flex md:grid md:grid-cols-3 items-center justify-between">
           <!-- Left: Logo -->
           <a href={t.homeLink} class="text-xl font-bold text-gray-900 hover:text-blue-600 transition-colors">
             Gaudette AI
           </a>
           
-          <!-- Center: Nav Links -->
-          <div class="flex items-center justify-center space-x-6">
+          <!-- Center: Desktop Nav Links -->
+          <div class="desktop-nav flex items-center justify-center space-x-6">
             <a href={t.homeLink} class="text-gray-700 hover:text-blue-600 font-medium transition-colors">{t.home}</a>
             <a href={t.consultingLink} class="text-gray-700 hover:text-blue-600 font-medium transition-colors">{t.consulting}</a>
             <a href={t.contactLink} class="text-gray-700 hover:text-blue-600 font-medium transition-colors">{t.contact}</a>
@@ -121,20 +201,36 @@ const t = nav[lang as keyof typeof nav] || nav.en;
             <a href={t.ktcLink} class="text-gray-700 hover:text-blue-600 font-medium transition-colors">{t.ktc}</a>
           </div>
           
-          <!-- Right: Language Dropdown -->
-          <div class="flex justify-end">
+          <!-- Right: Language + Hamburger -->
+          <div class="flex items-center justify-end gap-4">
             <div class="language-dropdown">
               <button class="language-button text-gray-700">
-                🌐 {t.language} ▼
+                🌐 <span class="hidden md:inline">{t.language}</span> ▼
               </button>
               <div class="language-menu">
                 <a href="/">🇬🇧 English</a>
                 <a href="/fr">🇫🇷 Français</a>
               </div>
             </div>
+            
+            <!-- Mobile Hamburger -->
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
           </div>
         </div>
       </nav>
+
+      <!-- Mobile Menu -->
+      <div class="mobile-menu" id="mobile-menu">
+        <a href={t.homeLink}>{t.home}</a>
+        <a href={t.consultingLink}>{t.consulting}</a>
+        <a href={t.contactLink}>{t.contact}</a>
+        <a href={t.faqLink}>{t.faq}</a>
+        <a href={t.ktcLink}>{t.ktc}</a>
+      </div>
     </header>
     
     <main>
@@ -146,5 +242,35 @@ const t = nav[lang as keyof typeof nav] || nav.en;
         <p>&copy; 2026 Gaudette AI inc. All rights reserved.</p>
       </div>
     </footer>
+
+    <script>
+      // Mobile menu toggle
+      const hamburger = document.getElementById('hamburger');
+      const mobileMenu = document.getElementById('mobile-menu');
+      
+      if (hamburger && mobileMenu) {
+        hamburger.addEventListener('click', () => {
+          hamburger.classList.toggle('active');
+          mobileMenu.classList.toggle('active');
+        });
+
+        // Close menu when clicking a link
+        const menuLinks = mobileMenu.querySelectorAll('a');
+        menuLinks.forEach(link => {
+          link.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            mobileMenu.classList.remove('active');
+          });
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+          if (!hamburger.contains(e.target as Node) && !mobileMenu.contains(e.target as Node)) {
+            hamburger.classList.remove('active');
+            mobileMenu.classList.remove('active');
+          }
+        });
+      }
+    </script>
   </body>
 </html>
