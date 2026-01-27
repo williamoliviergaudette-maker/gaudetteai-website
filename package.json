@@ -1,17 +1,9 @@
-{
-  "name": "gaudetteai-website",
-  "type": "module",
-  "version": "0.0.1",
+﻿{
+  "name": "gaudetteai-construction",
+  "version": "1.0.0",
+  "description": "Construction page for Gaudette AI",
   "scripts": {
-    "dev": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview",
-    "astro": "astro"
-  },
-  "dependencies": {
-    "@astrojs/sitemap": "^3.7.0",
-    "@astrojs/tailwind": "^6.0.2",
-    "astro": "^5.16.11",
-    "tailwindcss": "^3.4.19"
+    "build": "if not exist dist mkdir dist && copy public\\index.html dist\\",
+    "preview": "cd public && python -m http.server 3000"
   }
 }
