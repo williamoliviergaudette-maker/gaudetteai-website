@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "Construction page for Gaudette AI",
   "scripts": {
-    "dev": "cd public && python -m http.server 3000",
+    "dev": "npx http-server public -p 3000 -o",
     "build": "if not exist dist mkdir dist && copy public\\index.html dist\\index.html",
-    "preview": "cd dist && python -m http.server 4173"
+    "preview": "npx http-server dist -p 4173 -o"
   }
 }
