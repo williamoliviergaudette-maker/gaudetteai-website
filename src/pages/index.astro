@@ -1,85 +1,229 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
+// Construction page - Astro version
 ---
 
-<BaseLayout title="Home">
-  <!-- Hero Section - Simplified and Professional -->
-  <section class="bg-gray-100">
-    <div class="container mx-auto px-4 pt-16 pb-12 max-w-4xl">
-      <div class="bg-white p-8 rounded-xl border border-gray-200 shadow-lg">
-        <div class="text-center">
-          <div class="inline-block mb-4">
-            <div class="h-1 w-20 bg-gradient-to-r from-blue-600 to-blue-400 rounded-full mx-auto mb-6"></div>
-          </div>
-          <h1 class="text-5xl font-bold mb-6 text-gray-900">Knowledge That Compounds</h1>
-          <p class="text-2xl text-gray-700 mb-8 leading-relaxed max-w-3xl mx-auto">
-            <i>A methodology for building personalised AI systems where knowledge persists, 
-            compounds, and routes intelligently.</i>
-          </p>
-          <div class="flex gap-4 justify-center">
-            <a href="/consulting" class="bg-white text-blue-600 border-2 border-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 font-semibold shadow-md hover:shadow-lg transition-all hover:-translate-y-0.5">
-              Work With Us
-            </a>
-            <a href="/ktc" class="bg-white text-blue-600 border-2 border-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 font-semibold shadow-md hover:shadow-lg transition-all hover:-translate-y-0.5">
-              Learn the Method
-            </a>
-          </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gaudette AI - Site Under Maintenance</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #f3f4f6;
+            color: #1f2937;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+        }
+        
+        .container {
+            max-width: 600px;
+            width: 100%;
+        }
+        
+        .card {
+            background: white;
+            border-radius: 16px;
+            padding: 3rem;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            animation: fadeIn 0.6s ease-out;
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #1f2937;
+            margin-bottom: 2rem;
+            letter-spacing: -0.02em;
+        }
+        
+        .icon-container {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 2rem;
+            position: relative;
+        }
+        
+        .icon {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: pulse 2s ease-in-out infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+            50% {
+                transform: scale(1.05);
+                opacity: 0.9;
+            }
+        }
+        
+        .icon::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            border: 2px solid #3b82f6;
+            animation: ripple 2s ease-out infinite;
+        }
+        
+        @keyframes ripple {
+            0% {
+                transform: scale(1);
+                opacity: 0.6;
+            }
+            100% {
+                transform: scale(1.5);
+                opacity: 0;
+            }
+        }
+        
+        .icon svg {
+            width: 40px;
+            height: 40px;
+            stroke: white;
+            stroke-width: 2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            fill: none;
+        }
+        
+        h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #111827;
+            margin-bottom: 1rem;
+            letter-spacing: -0.03em;
+        }
+        
+        p {
+            font-size: 1.125rem;
+            color: #1c1d1e;
+            line-height: 1.7;
+            margin-bottom: 2rem;
+        }
+        
+        .status {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            background: #eff6ff;
+            color: #1e40af;
+            border-radius: 9999px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-bottom: 2rem;
+        }
+        
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            background: #3b82f6;
+            border-radius: 50%;
+            animation: blink 1.5s ease-in-out infinite;
+        }
+        
+        @keyframes blink {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.3;
+            }
+        }
+        
+        .footer {
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid #e5e7eb;
+            font-size: 0.875rem;
+            color: #676c6c;
+        }
+        
+        @media (max-width: 640px) {
+            .card {
+                padding: 2rem;
+            }
+            
+            h1 {
+                font-size: 1.5rem;
+            }
+            
+            p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="logo">Gaudette AI</div>
+            
+            <div class="icon-container">
+                <div class="icon">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                        <path d="M2 17l10 5 10-5"></path>
+                        <path d="M2 12l10 5 10-5"></path>
+                    </svg>
+                </div>
+            </div>
+            
+            <div class="status">
+                <span class="status-dot"></span>
+                Under Maintenance
+            </div>
+            
+            <h1>We're Making Improvements</h1>
+            
+            <p>
+                Our site is temporarily offline while we make updates and improvements. 
+                We'll be back shortly with an even better experience.
+            </p>
+            
+            <p style="margin-bottom: 0; color: #27292d; font-size: 1rem;">
+                Thank you for your patience.
+            </p>
+            
+            <div class="footer">
+                © 2026 Gaudette AI. Building the nervous system for AI-augmented organizations.
+            </div>
         </div>
-      </div>
     </div>
-  </section>
-
-  <!-- Problem + Solution Section - Merged -->
-  <section class="bg-gray-100">
-    <div class="container mx-auto px-4 py-12 max-w-4xl">
-      <div class="bg-white p-8 rounded-xl border border-gray-200 shadow-lg">
-        <!-- Problem -->
-        <div class="border-l-4 border-blue-600 pl-6 mb-10">
-          <h2 class="text-3xl font-bold mb-6 text-gray-900">The Problem</h2>
-          <p class="text-lg text-gray-700 mb-4 leading-relaxed">
-            Every AI conversation starts from zero. Context disappears between sessions. 
-            Knowledge gets lost. You repeat yourself constantly.
-          </p>
-          <p class="text-lg text-gray-700 leading-relaxed">
-            It's like having a brilliant colleague who forgets everything overnight.
-          </p>
-        </div>
-
-        <!-- Solution -->
-        <div class="border-l-4 border-blue-600 pl-6">
-          <h2 class="text-3xl font-bold mb-6 text-gray-900">The Solution</h2>
-          <p class="text-lg text-gray-700 mb-4 leading-relaxed">
-            Build systems where knowledge persists, compounds, and routes intelligently 
-            across specialized AI "Brains."
-          </p>
-          <p class="text-lg text-gray-700 leading-relaxed">
-            This is Knowledge That Compounds.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- About Section - Seamless -->
-  <section class="bg-gray-100 pb-16">
-    <div class="container mx-auto px-4 py-12 max-w-5xl">
-      <div class="bg-white p-8 rounded-xl border border-gray-200 shadow-lg">
-        <h2 class="text-3xl font-bold mb-6 text-gray-900">About Gaudette AI</h2>
-        <p class="text-lg text-gray-700 mb-4 leading-relaxed">
-          Gaudette AI inc. helps knowledge workers build AI systems that remember.
-        </p>
-        <p class="text-lg text-gray-700 mb-6 leading-relaxed">
-          Founded in January 2026 by Frédéric Gaudette, we specialize in the 
-          Knowledge That Compounds (KTC) methodology.
-        </p>
-        <div class="border-t border-gray-200 pt-6 mt-6">
-          <h3 class="text-2xl font-bold mb-4 text-gray-900">Our Approach</h3>
-          <p class="text-lg text-gray-700 leading-relaxed">
-            We don't sell software. We teach methodology and deploy systems that 
-            compound knowledge over time.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-</BaseLayout>
+</body>
+</html>
