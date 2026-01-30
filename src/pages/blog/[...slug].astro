@@ -36,7 +36,7 @@ const formattedDate = new Date(post.data.pubDate).toLocaleDateString('en-US', {
     </div>
 
     <!-- Article Header -->
-    <article class="bg-white rounded-lg shadow-sm overflow-hidden">
+    <article class="bg-white rounded-xl border border-gray-200 shadow-lg overflow-hidden">
       <div class="px-8 py-12">
         <!-- Post metadata -->
         <div class="mb-8">
@@ -51,7 +51,7 @@ const formattedDate = new Date(post.data.pubDate).toLocaleDateString('en-US', {
           <!-- Tags -->
           {post.data.tags.length > 0 && (
             <div class="flex flex-wrap gap-2 mb-6">
-              {post.data.tags.map((tag) => (
+              {post.data.tags.map((tag: string) => (
                 <span class="inline-block bg-gray-100 text-gray-700 text-sm px-3 py-1 rounded-full">
                   {tag}
                 </span>
