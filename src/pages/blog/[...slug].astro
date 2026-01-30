@@ -1,0 +1,92 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import EmailCapture from '../../components/EmailCapture.astro';
+
+export async function getStaticPaths() {
+  const blogPosts = await getCollection('blog');
+  // Only generate pages for published posts
+  const publishedPosts = blogPosts.filter(post => !post.data.draft);
+  
+  return publishedPosts.map(post => ({
+    params: { slug: post.slug },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await post.render();
+
+// Format date for display
+const formattedDate = new Date(post.data.pubDate).toLocaleDateString('en-US', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric'
+});
+---
+
+<BaseLayout title={post.data.title} description={post.data.description}>
+  <!-- Main Content -->
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <!-- Back link -->
+    <div class="mb-8">
+      <a href="/blog" class="text-blue-600 hover:text-blue-700 font-medium">
+        ← Back to all posts
+      </a>
+    </div>
+
+    <!-- Article Header -->
+    <article class="bg-white rounded-lg shadow-sm overflow-hidden">
+      <div class="px-8 py-12">
+        <!-- Post metadata -->
+        <div class="mb-8">
+          <div class="flex items-center gap-4 text-sm text-gray-600 mb-4">
+            <time datetime={post.data.pubDate.toISOString()}>
+              {formattedDate}
+            </time>
+            <span>•</span>
+            <span>{post.data.author}</span>
+          </div>
+          
+          <!-- Tags -->
+          {post.data.tags.length > 0 && (
+            <div class="flex flex-wrap gap-2 mb-6">
+              {post.data.tags.map((tag) => (
+                <span class="inline-block bg-gray-100 text-gray-700 text-sm px-3 py-1 rounded-full">
+                  {tag}
+                </span>
+              ))}
+            </div>
+          )}
+          
+          <!-- Title and description -->
+          <h1 class="text-4xl font-bold text-gray-900 mb-4">
+            {post.data.title}
+          </h1>
+          <p class="text-xl text-gray-600">
+            {post.data.description}
+          </p>
+        </div>
+
+        <!-- Article Content -->
+        <div class="prose prose-lg prose-gray max-w-none
+                    prose-headings:font-bold prose-headings:text-gray-900
+                    prose-p:text-gray-700 prose-p:leading-relaxed
+                    prose-a:text-blue-600 prose-a:no-underline hover:prose-a:underline
+                    prose-strong:text-gray-900 prose-strong:font-semibold
+                    prose-ul:text-gray-700 prose-ol:text-gray-700
+                    prose-li:marker:text-gray-400
+                    prose-code:text-gray-900 prose-code:bg-gray-100 prose-code:px-1 prose-code:py-0.5 prose-code:rounded
+                    prose-pre:bg-gray-900 prose-pre:text-gray-100
+                    prose-blockquote:border-l-blue-500 prose-blockquote:text-gray-700">
+          <Content />
+        </div>
+      </div>
+    </article>
+
+    <!-- Email Capture Section -->
+    <div class="mt-16">
+      <EmailCapture />
+    </div>
+  </div>
+</BaseLayout>

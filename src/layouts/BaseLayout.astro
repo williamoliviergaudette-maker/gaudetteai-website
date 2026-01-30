@@ -15,12 +15,14 @@ const nav = {
     home: 'Home',
     ktc: 'KTC',
     consulting: 'Consulting',
+    blog: 'Blog',
     contact: 'Contact',
     faq: 'FAQ',
     language: 'Language',
     homeLink: '/',
     ktcLink: '/ktc',
     consultingLink: '/consulting',
+    blogLink: '/blog',
     contactLink: '/contact',
     faqLink: '/faq'
   },
@@ -28,12 +30,14 @@ const nav = {
     home: 'Accueil',
     ktc: 'KTC',
     consulting: 'Services',
+    blog: 'Blog',
     contact: 'Contact',
     faq: 'FAQ',
     language: 'Langue',
     homeLink: '/fr',
     ktcLink: '/fr/ktc',
     consultingLink: '/fr/consulting',
+    blogLink: '/fr/blog',
     contactLink: '/fr/contact',
     faqLink: '/fr/faq'
   }
@@ -196,6 +200,7 @@ const t = nav[lang as keyof typeof nav] || nav.en;
           <div class="desktop-nav flex items-center justify-center space-x-6">
             <a href={t.homeLink} class="text-gray-700 hover:text-blue-600 font-medium transition-colors">{t.home}</a>
             <a href={t.consultingLink} class="text-gray-700 hover:text-blue-600 font-medium transition-colors">{t.consulting}</a>
+            <a href={t.blogLink} class="text-gray-700 hover:text-blue-600 font-medium transition-colors">{t.blog}</a>
             <a href={t.contactLink} class="text-gray-700 hover:text-blue-600 font-medium transition-colors">{t.contact}</a>
             <a href={t.faqLink} class="text-gray-700 hover:text-blue-600 font-medium transition-colors">{t.faq}</a>
             <a href={t.ktcLink} class="text-gray-700 hover:text-blue-600 font-medium transition-colors">{t.ktc}</a>
@@ -227,6 +232,7 @@ const t = nav[lang as keyof typeof nav] || nav.en;
       <div class="mobile-menu" id="mobile-menu">
         <a href={t.homeLink}>{t.home}</a>
         <a href={t.consultingLink}>{t.consulting}</a>
+        <a href={t.blogLink}>{t.blog}</a>
         <a href={t.contactLink}>{t.contact}</a>
         <a href={t.faqLink}>{t.faq}</a>
         <a href={t.ktcLink}>{t.ktc}</a>
