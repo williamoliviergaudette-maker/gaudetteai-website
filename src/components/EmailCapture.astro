@@ -1,6 +1,5 @@
 ---
-// EmailCapture component - Newsletter signup form
-// TODO: Replace with actual ConvertKit form embed code once account is set up
+// EmailCapture component - Newsletter signup form with ConvertKit
 ---
 
 <div class="bg-white rounded-lg shadow-sm p-8 md:p-12">
@@ -15,33 +14,9 @@
       Join the list to get updates on the book launch, methodology insights, and practical techniques for building AI systems that remember.
     </p>
 
-    <!-- Email Form - PLACEHOLDER -->
-    <!-- Replace this entire section with ConvertKit embed code -->
-    <div class="bg-gray-50 border-2 border-dashed border-gray-300 rounded-lg p-8">
-      <p class="text-gray-500 text-sm mb-4">
-        📧 ConvertKit form will be embedded here
-      </p>
-      
-      <!-- Temporary form (replace with ConvertKit) -->
-      <form class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
-        <input 
-          type="email" 
-          placeholder="Enter your email" 
-          class="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-          disabled
-        />
-        <button 
-          type="submit" 
-          class="px-6 py-3 bg-gray-400 text-white font-medium rounded-lg cursor-not-allowed"
-          disabled
-        >
-          Join the List
-        </button>
-      </form>
-      
-      <p class="text-xs text-gray-500 mt-4">
-        (ConvertKit integration pending)
-      </p>
+    <!-- ConvertKit Form Embed -->
+    <div class="max-w-md mx-auto">
+      <script async data-uid="07ca78348e" src="https://gaudetteai.kit.com/07ca78348e/index.js"></script>
     </div>
 
     <!-- Privacy note -->
@@ -50,15 +25,3 @@
     </p>
   </div>
 </div>
-
-<!-- 
-INSTRUCTIONS FOR CONVERTKIT INTEGRATION:
-1. Log into ConvertKit account
-2. Create a new form or landing page
-3. Copy the embed code
-4. Replace the entire "bg-gray-50 border-2..." div above with the ConvertKit embed
-5. Style adjustments may be needed to match the design
-
-ConvertKit embed code typically looks like:
-<script async data-uid="YOUR_FORM_ID" src="https://your-creator.ck.page/YOUR_FORM_ID/index.js"></script>
--->
