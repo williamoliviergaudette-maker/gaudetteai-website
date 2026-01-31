@@ -189,11 +189,11 @@ const t = nav[lang as keyof typeof nav] || nav.en;
   </head>
   <body class="bg-gray-100 text-gray-900">
     <header class="bg-white border-b border-gray-200 sticky top-0 z-50 shadow-sm">
-      <nav class="container mx-auto px-4 py-4">
+      <nav class="container mx-auto px-4 py=0.3">
         <div class="flex md:grid md:grid-cols-3 items-center justify-between">
           <!-- Left: Logo -->
-          <a href={t.homeLink} class="text-xl font-bold text-gray-900 hover:text-blue-600 transition-colors">
-            Gaudette AI
+          <a href={t.homeLink} class="flex items-center hover:opacity-80 transition-opacity">
+            <img src="/images/gaudette-ai-logo-light.png" alt="Gaudette AI" class="h-20" />
           </a>
           
           <!-- Center: Desktop Nav Links -->
