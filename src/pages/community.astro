@@ -1,0 +1,82 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout 
+  title="Community" 
+  description="Join practitioners building Brain networks with the Knowledge That Compounds methodology"
+>
+  <section class="bg-gray-100">
+    <div class="container mx-auto px-4 pt-16 pb-12 max-w-4xl">
+      <!-- Hero Card with Blue Gradient Line -->
+      <div class="bg-white p-8 rounded-xl border border-gray-200 shadow-lg">
+        <div class="inline-block mb-4">
+          <div class="h-1 w-20 bg-gradient-to-r from-blue-600 to-blue-400 rounded-full mb-6"></div>
+        </div>
+        <h1 class="text-4xl font-bold mb-6 text-gray-900">Join the KTC Community</h1>
+        <p class="text-lg text-gray-700 leading-relaxed max-w-2xl">
+          Connect with practitioners building distributed intelligence systems with Brain networks.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Content Section -->
+  <section class="bg-gray-100 pb-16">
+    <div class="container mx-auto px-4 max-w-4xl">
+      <!-- Reddit Community Card -->
+      <div class="bg-white rounded-lg shadow-md p-8 mb-8">
+        <div class="flex items-start gap-4 mb-4">
+          <div class="text-4xl">📱</div>
+          <div>
+            <h2 class="text-2xl font-bold text-gray-900 mb-2">r/KTCommunity</h2>
+            <p class="text-gray-600 mb-6">
+              Share your implementations, ask questions, and learn from other practitioners 
+              building distributed intelligence with the KTC methodology.
+            </p>
+            <a 
+              href="https://reddit.com/r/KTCommunity" 
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+            >
+              Join Reddit Community →
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Additional Resources Card -->
+      <div class="bg-white rounded-lg shadow-md p-8">
+        <div class="flex items-start gap-4">
+          <div class="text-4xl">📚</div>
+          <div>
+            <h2 class="text-2xl font-bold text-gray-900 mb-4">Learn More</h2>
+            <ul class="space-y-3 text-gray-600">
+              <li>
+                <a href="/ktc" class="text-blue-600 hover:text-blue-700 font-medium">
+                  → Read the book: Knowledge That Compounds
+                </a>
+              </li>
+              <li>
+                <a href="/blog" class="text-blue-600 hover:text-blue-700 font-medium">
+                  → Explore our blog for implementation guides
+                </a>
+              </li>
+              <li>
+                <a href="/consulting" class="text-blue-600 hover:text-blue-700 font-medium">
+                  → Advanced consulting and team deployment
+                </a>
+              </li>
+              <li>
+                <a href="/contact" class="text-blue-600 hover:text-blue-700 font-medium">
+                  → Get in touch for questions or support
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

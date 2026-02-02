@@ -16,6 +16,7 @@ const nav = {
     ktc: 'KTC',
     consulting: 'Consulting',
     blog: 'Blog',
+    community: 'Community',
     contact: 'Contact',
     faq: 'FAQ',
     language: 'Language',
@@ -23,6 +24,7 @@ const nav = {
     ktcLink: '/ktc',
     consultingLink: '/consulting',
     blogLink: '/blog',
+    communityLink: '/community',
     contactLink: '/contact',
     faqLink: '/faq'
   },
@@ -31,6 +33,7 @@ const nav = {
     ktc: 'KTC',
     consulting: 'Services',
     blog: 'Blog',
+    community: 'Communauté',
     contact: 'Contact',
     faq: 'FAQ',
     language: 'Langue',
@@ -38,6 +41,7 @@ const nav = {
     ktcLink: '/fr/ktc',
     consultingLink: '/fr/consulting',
     blogLink: '/fr/blog',
+    communityLink: '/fr/communaute',
     contactLink: '/fr/contact',
     faqLink: '/fr/faq'
   }
@@ -201,6 +205,7 @@ const t = nav[lang as keyof typeof nav] || nav.en;
             <a href={t.homeLink} class="text-gray-700 hover:text-blue-600 font-medium transition-colors">{t.home}</a>
             <a href={t.consultingLink} class="text-gray-700 hover:text-blue-600 font-medium transition-colors">{t.consulting}</a>
             <a href={t.blogLink} class="text-gray-700 hover:text-blue-600 font-medium transition-colors">{t.blog}</a>
+            <a href={t.communityLink} class="text-gray-700 hover:text-blue-600 font-medium transition-colors">{t.community}</a>
             <a href={t.contactLink} class="text-gray-700 hover:text-blue-600 font-medium transition-colors">{t.contact}</a>
             <a href={t.faqLink} class="text-gray-700 hover:text-blue-600 font-medium transition-colors">{t.faq}</a>
             <a href={t.ktcLink} class="text-gray-700 hover:text-blue-600 font-medium transition-colors">{t.ktc}</a>
@@ -233,6 +238,7 @@ const t = nav[lang as keyof typeof nav] || nav.en;
         <a href={t.homeLink}>{t.home}</a>
         <a href={t.consultingLink}>{t.consulting}</a>
         <a href={t.blogLink}>{t.blog}</a>
+        <a href={t.communityLink}>{t.community}</a>
         <a href={t.contactLink}>{t.contact}</a>
         <a href={t.faqLink}>{t.faq}</a>
         <a href={t.ktcLink}>{t.ktc}</a>
