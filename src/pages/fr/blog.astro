@@ -1,0 +1,43 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import BlogPostCard from '../../components/BlogPostCard.astro';
+
+// Get all blog posts, filter out drafts, and sort by date (newest first)
+const allPosts = await getCollection('blog');
+const publishedPosts = allPosts
+  .filter(post => !post.data.draft)
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+
+const pageTitle = "Blog";
+const pageDescription = "Insights sur la productivité avec l'IA, la gestion des connaissances et la construction de systèmes qui se souviennent.";
+---
+
+<BaseLayout title={pageTitle} description={pageDescription} lang="fr">
+  <!-- Main Content -->
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <!-- Page Header in White Card with Blue Gradient Line -->
+    <div class="bg-white p-8 rounded-xl border border-gray-200 shadow-lg mb-12">
+      <div class="inline-block mb-4">
+        <div class="h-1 w-20 bg-gradient-to-r from-blue-600 to-blue-400 rounded-full mb-6"></div>
+      </div>
+      <h1 class="text-4xl font-bold text-gray-900 mb-4">Blog</h1>
+      <p class="text-xl text-gray-600">
+        Insights sur la productivité avec l'IA, la gestion des connaissances et la construction de systèmes qui se souviennent.
+      </p>
+    </div>
+
+    <!-- Blog Posts Grid -->
+    {publishedPosts.length > 0 ? (
+      <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-2">
+        {publishedPosts.map((post) => (
+          <BlogPostCard post={post} />
+        ))}
+      </div>
+    ) : (
+      <div class="bg-white rounded-lg shadow-sm p-12 text-center">
+        <p class="text-gray-500 text-lg">Aucun article pour le moment. Revenez bientôt!</p>
+      </div>
+    )}
+  </div>
+</BaseLayout>

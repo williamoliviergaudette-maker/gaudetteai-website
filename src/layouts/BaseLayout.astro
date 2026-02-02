@@ -13,36 +13,36 @@ const { title, description = 'Knowledge That Compounds', lang = 'en' } = Astro.p
 const nav = {
   en: {
     home: 'Home',
-    ktc: 'KTC',
     consulting: 'Consulting',
+    ktc: 'KTC',
+    contact: 'Contact',
     blog: 'Blog',
     community: 'Community',
-    contact: 'Contact',
     faq: 'FAQ',
     language: 'Language',
     homeLink: '/',
-    ktcLink: '/ktc',
     consultingLink: '/consulting',
+    ktcLink: '/ktc',
+    contactLink: '/contact',
     blogLink: '/blog',
     communityLink: '/community',
-    contactLink: '/contact',
     faqLink: '/faq'
   },
   fr: {
     home: 'Accueil',
-    ktc: 'KTC',
     consulting: 'Services',
+    ktc: 'KTC',
+    contact: 'Contact',
     blog: 'Blog',
     community: 'Communauté',
-    contact: 'Contact',
     faq: 'FAQ',
     language: 'Langue',
     homeLink: '/fr',
-    ktcLink: '/fr/ktc',
     consultingLink: '/fr/consulting',
+    ktcLink: '/fr/ktc',
+    contactLink: '/fr/contact',
     blogLink: '/fr/blog',
     communityLink: '/fr/communaute',
-    contactLink: '/fr/contact',
     faqLink: '/fr/faq'
   }
 };
@@ -204,11 +204,11 @@ const t = nav[lang as keyof typeof nav] || nav.en;
           <div class="desktop-nav flex items-center justify-center space-x-6">
             <a href={t.homeLink} class="text-gray-700 hover:text-blue-600 font-medium transition-colors">{t.home}</a>
             <a href={t.consultingLink} class="text-gray-700 hover:text-blue-600 font-medium transition-colors">{t.consulting}</a>
+            <a href={t.ktcLink} class="text-gray-700 hover:text-blue-600 font-medium transition-colors">{t.ktc}</a>
+            <a href={t.contactLink} class="text-gray-700 hover:text-blue-600 font-medium transition-colors">{t.contact}</a>
             <a href={t.blogLink} class="text-gray-700 hover:text-blue-600 font-medium transition-colors">{t.blog}</a>
             <a href={t.communityLink} class="text-gray-700 hover:text-blue-600 font-medium transition-colors">{t.community}</a>
-            <a href={t.contactLink} class="text-gray-700 hover:text-blue-600 font-medium transition-colors">{t.contact}</a>
             <a href={t.faqLink} class="text-gray-700 hover:text-blue-600 font-medium transition-colors">{t.faq}</a>
-            <a href={t.ktcLink} class="text-gray-700 hover:text-blue-600 font-medium transition-colors">{t.ktc}</a>
           </div>
           
           <!-- Right: Language + Hamburger -->
@@ -237,11 +237,11 @@ const t = nav[lang as keyof typeof nav] || nav.en;
       <div class="mobile-menu" id="mobile-menu">
         <a href={t.homeLink}>{t.home}</a>
         <a href={t.consultingLink}>{t.consulting}</a>
+        <a href={t.ktcLink}>{t.ktc}</a>
+        <a href={t.contactLink}>{t.contact}</a>
         <a href={t.blogLink}>{t.blog}</a>
         <a href={t.communityLink}>{t.community}</a>
-        <a href={t.contactLink}>{t.contact}</a>
         <a href={t.faqLink}>{t.faq}</a>
-        <a href={t.ktcLink}>{t.ktc}</a>
       </div>
     </header>
     
