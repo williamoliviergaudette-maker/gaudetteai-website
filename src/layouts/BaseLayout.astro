@@ -56,6 +56,20 @@ const t = nav[lang as keyof typeof nav] || nav.en;
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content={description} />
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:image" content="https://gaudetteai.com/og-image.png" />
+    <meta property="og:image:width" content="800" />
+    <meta property="og:image:height" content="800" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://gaudetteai.com/og-image.png" />
+    
     <title>{title} | Gaudette AI</title>
     <style>
       /* Language Dropdown */
@@ -280,7 +294,7 @@ const t = nav[lang as keyof typeof nav] || nav.en;
           if (!hamburger.contains(e.target as Node) && !mobileMenu.contains(e.target as Node)) {
             hamburger.classList.remove('active');
             mobileMenu.classList.remove('active');
-          }
+          };
         });
       }
     </script>
