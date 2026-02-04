@@ -4,7 +4,7 @@ description: "How to architect persistent context systems that compound knowledg
 pubDate: 2026-01-29
 tags: ["ai-productivity", "knowledge-management", "methodology"]
 author: "Frédéric Gaudette"
-draft: false
+draft: true
 ---
 
 Context windows keep growing. GPT-4 Turbo processes 128K tokens. Claude handles 200K. Gemini 1.5 claims a million. Yet AI systems still forget everything the moment a conversation ends.
