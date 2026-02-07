@@ -2,31 +2,31 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 ---
 
-<BaseLayout title="Knowledge That Compounds" lang="fr">
+<BaseLayout title="Knowledge That Compounds">
   <!-- Hero Section - Separate -->
-  <section class="bg-gray-100 pt-8 pb-4">
-    <div class="container mx-auto px-4 max-w-2xl">
+  <section class="bg-gray-100 pt-8 pb-6">
+    <div class="container mx-auto px-4 max-w-3xl">
       <div class="bg-white p-8 rounded-xl border border-gray-200 shadow-lg text-center">
         <div class="inline-block mb-3">
-          <div class="h-1 w-16 bg-gradient-to-r from-blue-600 to-blue-400 rounded-full mb-4 mx-auto"></div>
+          <div class="h-1 w-20 bg-gradient-to-r from-blue-600 to-blue-400 rounded-full mb-4 mx-auto"></div>
         </div>
-        <h1 class="text-4xl font-bold text-gray-900 mb-4">Knowledge That Compounds</h1>
-        <p class="text-lg text-gray-600 italic">
+        <h1 class="text-5xl font-bold text-gray-900 mb-4">Knowledge That Compounds</h1>
+        <p class="text-xl text-gray-600 italic">
           Achetez le livre et apprenez la méthodologie
         </p>
       </div>
     </div>
   </section>
 
-  <!-- Book Section - Separate -->
+  <!-- Book Section - WITH WHITE CARD -->
   <section class="bg-gray-100 pb-6 pt-6">
-    <div class="container mx-auto px-4 max-w-2xl">
+    <div class="container mx-auto px-4 max-w-3xl">
+      <!-- White card wrapper around image -->
       <div class="bg-white p-10 rounded-xl border border-gray-200 shadow-lg">
-        <!-- Book Cover -->
         <div class="flex flex-col items-center">
-          <div class="w-full max-w-xl">
+          <div class="w-full max-w-2xl">
             <img 
-              src="/images/ktc-book-cover.jpg" 
+              src="/images/mockup_02.jpg" 
               alt="Couverture du livre Knowledge That Compounds" 
               class="w-full rounded-lg shadow-2xl"
             />
@@ -34,7 +34,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
         </div>
       </div>
       
-      <!-- CTA Button - Outside card, below -->
+      <!-- CTA Button - Below card -->
       <div class="flex justify-center mt-8">
         <a href="/fr/contact" class="inline-block bg-blue-600 text-white px-8 py-4 rounded-lg hover:bg-blue-700 font-semibold transition-all shadow-md hover:shadow-lg hover:-translate-y-0.5 text-lg">
           Soyez notifié au lancement →
@@ -58,8 +58,8 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
             <div class="flex items-start gap-4 flex-1">
               <div class="flex-shrink-0 w-10 h-10 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-lg">1</div>
               <div>
-                <h3 class="text-xl font-bold mb-2 text-gray-900">Donnez Vos Connaissances à l'IA</h3>
-                <p class="text-gray-700">L'IA doit posséder les connaissances essentielles en continu, pas seulement quand on le demande.</p>
+                <h3 class="text-xl font-bold mb-2 text-gray-900">Donnez vos connaissances à l'IA</h3>
+                <p class="text-gray-700">L'IA doit posséder les connaissances essentielles en continu, pas seulement sur demande.</p>
               </div>
             </div>
           </div>
@@ -71,8 +71,8 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
             <div class="flex items-start gap-4 flex-1">
               <div class="flex-shrink-0 w-10 h-10 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-lg">2</div>
               <div>
-                <h3 class="text-xl font-bold mb-2 text-gray-900">Capturez Au Fur et à Mesure</h3>
-                <p class="text-gray-700">Connaissances externalisées à la création, pas rétroactivement.</p>
+                <h3 class="text-xl font-bold mb-2 text-gray-900">Capturez au fur et à mesure</h3>
+                <p class="text-gray-700">Connaissances externalisées au moment de la création, pas rétroactivement.</p>
               </div>
             </div>
           </div>
@@ -84,8 +84,8 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
             <div class="flex items-start gap-4 flex-1">
               <div class="flex-shrink-0 w-10 h-10 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-lg">3</div>
               <div>
-                <h3 class="text-xl font-bold mb-2 text-gray-900">Construisez des Systèmes Vivants</h3>
-                <p class="text-gray-700">Des systèmes qui s'améliorent eux-mêmes par l'utilisation.</p>
+                <h3 class="text-xl font-bold mb-2 text-gray-900">Construisez des systèmes vivants</h3>
+                <p class="text-gray-700">Des systèmes qui s'améliorent par leur utilisation.</p>
               </div>
             </div>
           </div>
@@ -97,8 +97,8 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
             <div class="flex items-start gap-4 flex-1">
               <div class="flex-shrink-0 w-10 h-10 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-lg">4</div>
               <div>
-                <h3 class="text-xl font-bold mb-2 text-gray-900">Distribuez l'Intelligence</h3>
-                <p class="text-gray-700">Plusieurs Cerveaux spécialisés, coordonnés par un hub central.</p>
+                <h3 class="text-xl font-bold mb-2 text-gray-900">Distribuez l'intelligence</h3>
+                <p class="text-gray-700">Plusieurs cerveaux spécialisés, coordonnés par un hub central.</p>
               </div>
             </div>
           </div>
@@ -110,7 +110,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
             <div class="flex items-start gap-4 flex-1">
               <div class="flex-shrink-0 w-10 h-10 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-lg">5</div>
               <div>
-                <h3 class="text-xl font-bold mb-2 text-gray-900">Vous Gardez le Contrôle</h3>
+                <h3 class="text-xl font-bold mb-2 text-gray-900">Vous gardez le contrôle</h3>
                 <p class="text-gray-700">Le jugement humain est maintenu, l'IA assiste mais ne remplace pas.</p>
               </div>
             </div>
